@@ -17,7 +17,9 @@ public class MakeLast {
         int doubleSizeOfArray = numsList.size()*2;
 
         int lastElementOfnumsList = numsList.get(nums.length-1);
+        /*Collections.nCopies() is to return an immutable list which contains n copies of given object.
 
+         */
         List<Integer> doubleSizeList = new ArrayList<Integer>(Collections.nCopies(doubleSizeOfArray,0));
 
 
