@@ -1,2 +1,6 @@
 .idea/vcs.xml
 target/
+.idea/
+out/
+codingBat-exercises.iml
+*.iml
