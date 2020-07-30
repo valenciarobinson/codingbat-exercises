@@ -15,27 +15,26 @@ public class Make2 {
 
         List<Integer> bList = Arrays.stream(b).boxed().collect(Collectors.toList());
 
-        List<Integer> newArray = new ArrayList<>(2);
-
         if(aList.size()==1){
-            newArray.add(aList.get(0));
-            newArray.add(bList.get(0));
-            return newArray;
+            return new ArrayList(){{
+                add(aList.get(0));
+                add(bList.get(0));
+            }};
         }
         else if (aList.size() >=2){
-            newArray.add(aList.get(0));
-            newArray.add(aList.get(1));
-            return newArray;
+            return new ArrayList(){{
+                add(aList.get(0));
+                add(aList.get(1));
+            }};
         }
-        else if (aList.size() <= 1){
-            newArray.add(bList.get(0));
-            newArray.add(bList.get(1));
-            return newArray;
+        else if (aList.size() ==0){
+            return new ArrayList(){{
+                add(bList.get(0));
+                add(bList.get(1));
+            }};
         }
         else
-            return newArray;
-
-
+            return Arrays.asList();
     }
 
 }
